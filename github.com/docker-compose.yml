@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  snyk_broker_github-com:
+    image: "snyk/broker:github-com"
+    restart: always
+    ports:
+      - "8001:8001"
+    volumes:
+      - .:/app
+    environment: 
+      - BROKER_TOKEN=
+      - LOG_LEVEL=info
+      - GITHUB_TOKEN=
+      - BROKER_CLIENT_URL=http://broker.797enterprises.com:8001
+      - PORT=8001

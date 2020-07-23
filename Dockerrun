@@ -1,0 +1,13 @@
+docker run --name="broker" --restart=always \
+-p 8000:8000 \
+-v /home/ubuntu/Workspace:/private \
+-e BROKER_TOKEN= \
+-e LOG_LEVEL=info \
+-e ACCEPT=/private/accept.json \
+-e BITBUCKET_USERNAME= \
+-e BITBUCKET_PASSWORD= \
+-e BITBUCKET=bitbucket.797enterprises.com:7990 \
+-e BITBUCKET_API=bitbucket.797enterprises.com:7990/rest/api/1.0 \
+-e BROKER_CLIENT_URL=http://broker.797enterprises.com:8000 \
+-e PORT=8000 \
+snyk/broker:bitbucket-server
