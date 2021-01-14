@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  snyk_broker:
+    image: "snyk/broker:bitbucket-server"
+    restart: always
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    environment: 
+      - BROKER_TOKEN=
+      - LOG_LEVEL=info
+      - ACCEPT=/app/accept.json
+      - BITBUCKET_USERNAME=
+      - BITBUCKET_PASSWORD=
+      - BITBUCKET=bitbucket.797enterprises.com:7990
+      - BITBUCKET_API=bitbucket.797enterprises.com:7990/rest/api/1.0
+      - BROKER_CLIENT_URL=http://broker.797enterprises.com:8000
+      - PORT=8000
