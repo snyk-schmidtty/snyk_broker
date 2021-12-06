@@ -1,7 +1,7 @@
-docker run --name="broker" --restart=always \
+docker run -d --name="bitbucket-server-broker" --restart=always --network SnykBrokerNetwork \
 -p 8000:8000 \
--v /home/ubuntu/Workspace:/private \
--e BROKER_TOKEN= \
+-v ~/Workspace/snyk_broker_:/private \
+-e BROKER_TOKEN=67f90367-da4e-4640-88e1-6bc9d89b78eb \
 -e LOG_LEVEL=info \
 -e ACCEPT=/private/accept.json \
 -e BITBUCKET_USERNAME= \
