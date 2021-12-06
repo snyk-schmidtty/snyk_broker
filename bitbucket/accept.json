@@ -7,6 +7,94 @@
     }
   ],
   "private": [
+        {
+      "//": "used to determine Terraform issues",
+      "method": "GET",
+      "path": "/projects/:project/repos/:repo/browse*/*.tf",
+      "origin": "https://${BITBUCKET_API}",
+      "auth": {
+        "scheme": "basic",
+        "username": "${BITBUCKET_USERNAME}",
+        "password": "${BITBUCKET_PASSWORD}"
+      }
+    },
+    {
+      "//": "used to determine Terraform issues",
+      "method": "GET",
+      "path": "/projects/:project/repos/:repo/browse*%2F*.tf",
+      "origin": "https://${BITBUCKET_API}",
+      "auth": {
+        "scheme": "basic",
+        "username": "${BITBUCKET_USERNAME}",
+        "password": "${BITBUCKET_PASSWORD}"
+      }
+    },
+    {
+      "//": "used to determine Cloud Config issues",
+      "method": "GET",
+      "path": "/projects/:project/repos/:repo/browse*/*.yaml",
+      "origin": "https://${BITBUCKET_API}",
+      "auth": {
+        "scheme": "basic",
+        "username": "${BITBUCKET_USERNAME}",
+        "password": "${BITBUCKET_PASSWORD}"
+      }
+    },
+    {
+      "//": "used to determine Cloud Config issues",
+      "method": "GET",
+      "path": "/projects/:project/repos/:repo/browse*%2F*.yaml",
+      "origin": "https://${BITBUCKET_API}",
+      "auth": {
+        "scheme": "basic",
+        "username": "${BITBUCKET_USERNAME}",
+        "password": "${BITBUCKET_PASSWORD}"
+      }
+    },
+    {
+      "//": "used to determine Cloud Config issues",
+      "method": "GET",
+      "path": "/projects/:project/repos/:repo/browse*/*.yml",
+      "origin": "https://${BITBUCKET_API}",
+      "auth": {
+        "scheme": "basic",
+        "username": "${BITBUCKET_USERNAME}",
+        "password": "${BITBUCKET_PASSWORD}"
+      }
+    },
+    {
+      "//": "used to determine Cloud Config issues",
+      "method": "GET",
+      "path": "/projects/:project/repos/:repo/browse*%2F*.yml",
+      "origin": "https://${BITBUCKET_API}",
+      "auth": {
+        "scheme": "basic",
+        "username": "${BITBUCKET_USERNAME}",
+        "password": "${BITBUCKET_PASSWORD}"
+      }
+    },
+    {
+      "//": "used to determine Cloud Config issues",
+      "method": "GET",
+      "path": "/projects/:project/repos/:repo/browse*/*.json",
+      "origin": "https://${BITBUCKET_API}",
+      "auth": {
+        "scheme": "basic",
+        "username": "${BITBUCKET_USERNAME}",
+        "password": "${BITBUCKET_PASSWORD}"
+      }
+    },
+    {
+      "//": "used to determine Cloud Config issues",
+      "method": "GET",
+      "path": "/projects/:project/repos/:repo/browse*%2F*.json",
+      "origin": "https://${BITBUCKET_API}",
+      "auth": {
+        "scheme": "basic",
+        "username": "${BITBUCKET_USERNAME}",
+        "password": "${BITBUCKET_PASSWORD}"
+      }
+    },
     {
       "//": "list the user's projects",
       "method": "GET",
@@ -197,6 +285,28 @@
     {
       "//": "used to determine the full dependency tree",
       "method": "GET",
+      "path": "/projects/:project/repos/:repo/browse*/requirements/*.txt",
+      "origin": "http://${BITBUCKET_API}",
+      "auth": {
+        "scheme": "basic",
+        "username": "${BITBUCKET_USERNAME}",
+        "password": "${BITBUCKET_PASSWORD}"
+      }
+    },
+    {
+      "//": "used to determine the full dependency tree",
+      "method": "GET",
+      "path": "/projects/:project/repos/:repo/browse*%2Frequirements%2F*.txt",
+      "origin": "http://${BITBUCKET_API}",
+      "auth": {
+        "scheme": "basic",
+        "username": "${BITBUCKET_USERNAME}",
+        "password": "${BITBUCKET_PASSWORD}"
+      }
+    },
+    {
+      "//": "used to determine the full dependency tree",
+      "method": "GET",
       "path": "/projects/:project/repos/:repo/browse*/yarn.lock",
       "origin": "http://${BITBUCKET_API}",
       "auth": {
@@ -231,6 +341,28 @@
       "//": "used to determine the full dependency tree",
       "method": "GET",
       "path": "/projects/:project/repos/:repo/browse*%2Fbuild.gradle",
+      "origin": "http://${BITBUCKET_API}",
+      "auth": {
+        "scheme": "basic",
+        "username": "${BITBUCKET_USERNAME}",
+        "password": "${BITBUCKET_PASSWORD}"
+      }
+    },
+    {
+      "//": "used to determine the full dependency tree",
+      "method": "GET",
+      "path": "/projects/:project/repos/:repo/browse*/gradle.lockfile",
+      "origin": "http://${BITBUCKET_API}",
+      "auth": {
+        "scheme": "basic",
+        "username": "${BITBUCKET_USERNAME}",
+        "password": "${BITBUCKET_PASSWORD}"
+      }
+    },
+    {
+      "//": "used to determine the full dependency tree",
+      "method": "GET",
+      "path": "/projects/:project/repos/:repo/browse*%2Fgradle.lockfile",
       "origin": "http://${BITBUCKET_API}",
       "auth": {
         "scheme": "basic",
@@ -635,10 +767,43 @@
       }
     },
     {
-      "//": "used to scan Dockerfile",
+      "//": "used to determine the full dependency tree",
       "method": "GET",
-      "path": "/projects/:project/repos/:repo/browse*/Dockerfile",
-      "origin": "https://${BITBUCKET_API}",
+      "path": "/projects/:project/repos/:repo/browse*/go.mod",
+      "origin": "http://${BITBUCKET_API}",
+      "auth": {
+        "scheme": "basic",
+        "username": "${BITBUCKET_USERNAME}",
+        "password": "${BITBUCKET_PASSWORD}"
+      }
+    },
+    {
+      "//": "used to determine the full dependency tree",
+      "method": "GET",
+      "path": "/projects/:project/repos/:repo/browse*%2Fgo.mod",
+      "origin": "http://${BITBUCKET_API}",
+      "auth": {
+        "scheme": "basic",
+        "username": "${BITBUCKET_USERNAME}",
+        "password": "${BITBUCKET_PASSWORD}"
+      }
+    },
+    {
+      "//": "used to determine the full dependency tree",
+      "method": "GET",
+      "path": "/projects/:project/repos/:repo/browse*/go.sum",
+      "origin": "http://${BITBUCKET_API}",
+      "auth": {
+        "scheme": "basic",
+        "username": "${BITBUCKET_USERNAME}",
+        "password": "${BITBUCKET_PASSWORD}"
+      }
+    },
+    {
+      "//": "used to determine the full dependency tree",
+      "method": "GET",
+      "path": "/projects/:project/repos/:repo/browse*%2Fgo.sum",
+      "origin": "http://${BITBUCKET_API}",
       "auth": {
         "scheme": "basic",
         "username": "${BITBUCKET_USERNAME}",
@@ -648,8 +813,8 @@
     {
       "//": "used to scan Dockerfile",
       "method": "GET",
-      "path": "/projects/:project/repos/:repo/browse*%2FDockerfile",
-      "origin": "https://${BITBUCKET_API}",
+      "path": "/projects/:project/repos/:repo/browse*/*Dockerfile*",
+      "origin": "http://${BITBUCKET_API}",
       "auth": {
         "scheme": "basic",
         "username": "${BITBUCKET_USERNAME}",
@@ -657,93 +822,16 @@
       }
     },
     {
-      "//": "used to determine Terraform issues",
+      "//": "used to scan Dockerfile",
       "method": "GET",
-      "path": "/projects/:project/repos/:repo/browse*/*.tf",
-      "origin": "https://${BITBUCKET_API}",
+      "path": "/projects/:project/repos/:repo/browse*%2F*Dockerfile*",
+      "origin": "http://${BITBUCKET_API}",
       "auth": {
         "scheme": "basic",
         "username": "${BITBUCKET_USERNAME}",
         "password": "${BITBUCKET_PASSWORD}"
       }
     },
-    {
-      "//": "used to determine Terraform issues",
-      "method": "GET",
-      "path": "/projects/:project/repos/:repo/browse*%2F*.tf",
-      "origin": "https://${BITBUCKET_API}",
-      "auth": {
-        "scheme": "basic",
-        "username": "${BITBUCKET_USERNAME}",
-        "password": "${BITBUCKET_PASSWORD}"
-      }
-    },
-    {
-      "//": "used to determine Cloud Config issues",
-      "method": "GET",
-      "path": "/projects/:project/repos/:repo/browse*/*.yaml",
-      "origin": "https://${BITBUCKET_API}",
-      "auth": {
-        "scheme": "basic",
-        "username": "${BITBUCKET_USERNAME}",
-        "password": "${BITBUCKET_PASSWORD}"
-      }
-    },
-    {
-      "//": "used to determine Cloud Config issues",
-      "method": "GET",
-      "path": "/projects/:project/repos/:repo/browse*%2F*.yaml",
-      "origin": "https://${BITBUCKET_API}",
-      "auth": {
-        "scheme": "basic",
-        "username": "${BITBUCKET_USERNAME}",
-        "password": "${BITBUCKET_PASSWORD}"
-      }
-    },
-    {
-      "//": "used to determine Cloud Config issues",
-      "method": "GET",
-      "path": "/projects/:project/repos/:repo/browse*/*.yml",
-      "origin": "https://${BITBUCKET_API}",
-      "auth": {
-        "scheme": "basic",
-        "username": "${BITBUCKET_USERNAME}",
-        "password": "${BITBUCKET_PASSWORD}"
-      }
-    },
-    {
-      "//": "used to determine Cloud Config issues",
-      "method": "GET",
-      "path": "/projects/:project/repos/:repo/browse*%2F*.yml",
-      "origin": "https://${BITBUCKET_API}",
-      "auth": {
-        "scheme": "basic",
-        "username": "${BITBUCKET_USERNAME}",
-        "password": "${BITBUCKET_PASSWORD}"
-      }
-    },
-    {
-      "//": "used to determine Cloud Config issues",
-      "method": "GET",
-      "path": "/projects/:project/repos/:repo/browse*/*.json",
-      "origin": "https://${BITBUCKET_API}",
-      "auth": {
-        "scheme": "basic",
-        "username": "${BITBUCKET_USERNAME}",
-        "password": "${BITBUCKET_PASSWORD}"
-      }
-    },
-    {
-      "//": "used to determine Cloud Config issues",
-      "method": "GET",
-      "path": "/projects/:project/repos/:repo/browse*%2F*.json",
-      "origin": "https://${BITBUCKET_API}",
-      "auth": {
-        "scheme": "basic",
-        "username": "${BITBUCKET_USERNAME}",
-        "password": "${BITBUCKET_PASSWORD}"
-      }
-    },   
     {
       "//": "used to check if there's any ignore rules or existing patches",
       "method": "GET",
@@ -974,6 +1062,12 @@
         "username": "${BITBUCKET_USERNAME}",
         "password": "${BITBUCKET_PASSWORD}"
       }
+    },
+    {
+      "//": "used to redirect requests to snyk git client",
+      "method": "any",
+      "path": "/snykgit/*",
+      "origin": "${GIT_CLIENT_URL}"
     }
   ]
 }
