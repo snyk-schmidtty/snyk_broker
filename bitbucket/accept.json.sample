@@ -8,94 +8,6 @@
   ],
   "private": [
     {
-      "//": "used to determine Infrastructure as Code issues",
-      "method": "GET",
-      "path": "/projects/:project/repos/:repo/browse*/*.yaml",
-      "origin": "http://${BITBUCKET_API}",
-      "auth": {
-        "scheme": "basic",
-        "username": "${BITBUCKET_USERNAME}",
-        "password": "${BITBUCKET_PASSWORD}"
-      }
-    },
-    {
-      "//": "used to determine Infrastructure as Code issues",
-      "method": "GET",
-      "path": "/projects/:project/repos/:repo/browse*%2F*.yaml",
-      "origin": "http://${BITBUCKET_API}",
-      "auth": {
-        "scheme": "basic",
-        "username": "${BITBUCKET_USERNAME}",
-        "password": "${BITBUCKET_PASSWORD}"
-      }
-    },
-    {
-      "//": "used to determine Infrastructure as Code issues",
-      "method": "GET",
-      "path": "/projects/:project/repos/:repo/browse*/*.yml",
-      "origin": "http://${BITBUCKET_API}",
-      "auth": {
-        "scheme": "basic",
-        "username": "${BITBUCKET_USERNAME}",
-        "password": "${BITBUCKET_PASSWORD}"
-      }
-    },
-    {
-      "//": "used to determine Infrastructure as Code issues",
-      "method": "GET",
-      "path": "/projects/:project/repos/:repo/browse*%2F*.yml",
-      "origin": "http://${BITBUCKET_API}",
-      "auth": {
-        "scheme": "basic",
-        "username": "${BITBUCKET_USERNAME}",
-        "password": "${BITBUCKET_PASSWORD}"
-      }
-    },
-    {
-      "//": "used to determine Infrastructure as Code issues",
-      "method": "GET",
-      "path": "/projects/:project/repos/:repo/browse*/*.json",
-      "origin": "http://${BITBUCKET_API}",
-      "auth": {
-        "scheme": "basic",
-        "username": "${BITBUCKET_USERNAME}",
-        "password": "${BITBUCKET_PASSWORD}"
-      }
-    },
-    {
-      "//": "used to determine Infrastructure as Code issues",
-      "method": "GET",
-      "path": "/projects/:project/repos/:repo/browse*%2F*.json",
-      "origin": "http://${BITBUCKET_API}",
-      "auth": {
-        "scheme": "basic",
-        "username": "${BITBUCKET_USERNAME}",
-        "password": "${BITBUCKET_PASSWORD}"
-      }
-    },
-    {
-      "//": "used to determine Infrastructure as Code issues",
-      "method": "GET",
-      "path": "/projects/:project/repos/:repo/browse*/*.tpl",
-      "origin": "http://${BITBUCKET_API}",
-      "auth": {
-        "scheme": "basic",
-        "username": "${BITBUCKET_USERNAME}",
-        "password": "${BITBUCKET_PASSWORD}"
-      }
-    },
-    {
-      "//": "used to determine Infrastructure as Code issues",
-      "method": "GET",
-      "path": "/projects/:project/repos/:repo/browse*%2F*.tpl",
-      "origin": "http://${BITBUCKET_API}",
-      "auth": {
-        "scheme": "basic",
-        "username": "${BITBUCKET_USERNAME}",
-        "password": "${BITBUCKET_PASSWORD}"
-      }
-    },
-    {
       "//": "list the user's projects",
       "method": "GET",
       "path": "/projects",
@@ -813,7 +725,7 @@
     {
       "//": "used to scan Dockerfile",
       "method": "GET",
-      "path": "/projects/:project/repos/:repo/browse*/Dockerfile",
+      "path": "/projects/:project/repos/:repo/browse*/*Dockerfile*",
       "origin": "http://${BITBUCKET_API}",
       "auth": {
         "scheme": "basic",
@@ -824,7 +736,7 @@
     {
       "//": "used to scan Dockerfile",
       "method": "GET",
-      "path": "/projects/:project/repos/:repo/browse*%2FDockerfile",
+      "path": "/projects/:project/repos/:repo/browse*%2F*Dockerfile*",
       "origin": "http://${BITBUCKET_API}",
       "auth": {
         "scheme": "basic",
