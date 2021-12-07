@@ -9,8 +9,8 @@ services:
     volumes:
       - .:/app
     environment: 
-      - BROKER_TOKEN=
+      - BROKER_TOKEN=$GH_BROKER_TOKEN
       - LOG_LEVEL=info
-      - GITHUB_TOKEN=
+      - GITHUB_TOKEN=$GH_BROKER_GITHUB_TOKEN
       - BROKER_CLIENT_URL=http://broker.797enterprises.com:8001
       - PORT=8001
