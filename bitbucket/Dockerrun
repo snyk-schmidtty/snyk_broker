@@ -7,7 +7,7 @@ docker run -d \
 -e BROKER_TOKEN=$BITBUCKET_BROKER_TOKEN \
 -e LOG_LEVEL=info \
 -e ACCEPT=/private/accept.json \
--e BITBUCKET_USERNAME=$BITBUCKET_USERNAME \
+-e BITBUCKET_USERNAME=$BITBUCKET_USER \
 -e BITBUCKET_PASSWORD=$BITBUCKET_PASSWORD \
 -e BITBUCKET=bitbucket.797enterprises.com:7990 \
 -e BITBUCKET_API=bitbucket.797enterprises.com:7990/rest/api/1.0 \
