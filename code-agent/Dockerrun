@@ -1,5 +1,9 @@
-docker run -d --name="code-agent" --restart=always --network SnykBrokerNetwork \
+#!/bin/bash
+docker run -d \
+--name="code-agent" \
+--restart=always \
+--network SnykBrokerNetwork \
 -p 3000:3000 \
--e SNYK_TOKEN= \
+-e SNYK_TOKEN=$CODE_AGENT_SNYK_TOKEN \
 -e PORT=3000 \
 snyk/code-agent
