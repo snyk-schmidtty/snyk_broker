@@ -1,3 +1,4 @@
+#!/bin/bash
 docker pull snyk/broker:bitbucket-server
 docker pull snyk/broker:github-com
 docker pull snyk/broker:gitlab
