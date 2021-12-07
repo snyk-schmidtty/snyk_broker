@@ -3,11 +3,15 @@ version: '3'
 services:
   snyk_broker:
     image: "snyk/broker:bitbucket-server"
+#    pull_policy: always
+#    image: "snykschmidtty/snyk-broker:bitbucket-tools"    
     restart: always
     ports:
       - "8000:8000"
     volumes:
       - .:/app
+#      - /etc/letsencrypt/live/broker.797enterprises.com:/certs
+
     environment: 
       - BROKER_TOKEN=
       - LOG_LEVEL=info
@@ -19,5 +23,5 @@ services:
       - BROKER_CLIENT_URL=http://broker.797enterprises.com:8000
       - PORT=8000
       - NODE_TLS_REJECT_UNAUTHORIZED=0
-      - HTTPS_KEY=/app/privkey.pem
-      - HTTPS_CERT=/app/cert.pem
+#      - HTTPS_KEY=/app/privkey.pem
+#      - HTTPS_CERT=/app/cert.pem
