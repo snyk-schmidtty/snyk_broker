@@ -1,0 +1,6 @@
+#!/bin/bash
+docker run -d \
+--restart=always \
+-p 8081:8081 \
+-e SNYK_PORT=8081 \
+snyk/container-registry-agent:latest
