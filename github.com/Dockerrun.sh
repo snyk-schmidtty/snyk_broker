@@ -7,6 +7,7 @@ docker run -d \
 -v ~/Workspace/snyk_broker_:/private \
 -e BROKER_TOKEN=$GH_BROKER_TOKEN \
 -e LOG_LEVEL=info \
+-e ACCEPT=/private/accept.json \
 -e GITHUB_TOKEN=$GH_BROKER_GITHUB_TOKEN \
 -e BROKER_CLIENT_URL=http://broker.797enterprises.com:8001 \
 -e PORT=8001 \
