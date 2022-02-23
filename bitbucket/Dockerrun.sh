@@ -4,7 +4,7 @@ docker run -d \
 --restart=always \
 --network SnykBrokerNetwork \
 -p 8000:8000 \
--v ~/Workspace/snyk_broker_:/private \
+-v ~/Workspace/snyk_broker/bitbucket:/private \
 -e BROKER_TOKEN=$BITBUCKET_BROKER_TOKEN \
 -e LOG_LEVEL=info \
 -e ACCEPT=/private/accept.json \

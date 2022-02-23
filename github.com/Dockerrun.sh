@@ -4,7 +4,7 @@ docker run -d \
 --restart=always \
 --network SnykBrokerNetwork \
 -p 8001:8001 \
--v ~/Workspace/snyk_broker_:/private \
+-v ~/Workspace/snyk_broker/github.com:/private \
 -e BROKER_TOKEN=$GH_BROKER_TOKEN \
 -e LOG_LEVEL=info \
 -e ACCEPT=/private/accept.json \
