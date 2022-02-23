@@ -1,4 +1,7 @@
 #!/bin/bash
+docker pull snyk/broker:github-com
+docker stop github-com-broker
+docker rm github-com-broker
 docker run -d \
 --name="github-com-broker" \
 --restart=always \
