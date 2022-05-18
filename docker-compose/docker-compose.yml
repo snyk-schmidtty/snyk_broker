@@ -1,6 +1,6 @@
 # Reference: https://docs.snyk.io/snyk-code/snyk-code-local-git-support
 # Reference: https://github.com/snyk/broker
-version: "3.9"
+# version: "3.9"
 services:
   bitbucket-server-broker:
     image: "snyk/broker:bitbucket-server"
