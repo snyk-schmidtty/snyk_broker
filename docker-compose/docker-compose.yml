@@ -26,11 +26,3 @@ services:
         GIT_CLIENT_URL: http://code-agent:3000
 #      - HTTPS_KEY: /app/privkey.pem
 #      - HTTPS_CERT: /app/cert.pem
-  code-agent:
-    image: "snyk/code-agent:latest"
-    restart: always
-    pull_policy: always
-    environment:
-        PORT: 3000
-        SNYK_TOKEN: $CODE_AGENT_SNYK_TOKEN
-        NODE_TLS_REJECT_UNAUTHRORIZED: 0
