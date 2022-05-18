@@ -27,7 +27,7 @@ services:
 #      - HTTPS_KEY: /app/privkey.pem
 #      - HTTPS_CERT: /app/cert.pem
   code-agent:
-    image: snyk/code-agent
+    image: "snyk/code-agent"
     restart: always
     pull_policy: always
     environment:
