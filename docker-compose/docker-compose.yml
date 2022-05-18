@@ -37,7 +37,8 @@ services:
       - GITHUB_TOKEN=$GH_BROKER_GITHUB_TOKEN
       - BROKER_CLIENT_URL=http://broker.797enterprises.com:8001
       - PORT=8001
-  code_agent:
+      - GIT_CLIENT_URL=http://code-agent:3000
+  code-agent:
     image: "snyk/code-agent:latest"
     restart: always
     environment:
