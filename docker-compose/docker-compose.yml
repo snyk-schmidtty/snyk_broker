@@ -1,3 +1,5 @@
+version: '3'
+
 services:
   bitbucket-broker:
     image: "snyk/broker:bitbucket-server"
