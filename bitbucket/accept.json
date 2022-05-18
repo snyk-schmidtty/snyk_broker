@@ -11,7 +11,7 @@
       "//": "used to determine Terraform issues",
       "method": "GET",
       "path": "/projects/:project/repos/:repo/browse*/*.tf",
-      "origin": "https://${BITBUCKET_API}",
+      "origin": "http://${BITBUCKET_API}",
       "auth": {
         "scheme": "basic",
         "username": "${BITBUCKET_USERNAME}",
@@ -22,7 +22,7 @@
       "//": "used to determine Terraform issues",
       "method": "GET",
       "path": "/projects/:project/repos/:repo/browse*%2F*.tf",
-      "origin": "https://${BITBUCKET_API}",
+      "origin": "http://${BITBUCKET_API}",
       "auth": {
         "scheme": "basic",
         "username": "${BITBUCKET_USERNAME}",
@@ -33,7 +33,7 @@
       "//": "used to determine Cloud Config issues",
       "method": "GET",
       "path": "/projects/:project/repos/:repo/browse*/*.yaml",
-      "origin": "https://${BITBUCKET_API}",
+      "origin": "http://${BITBUCKET_API}",
       "auth": {
         "scheme": "basic",
         "username": "${BITBUCKET_USERNAME}",
@@ -44,7 +44,7 @@
       "//": "used to determine Cloud Config issues",
       "method": "GET",
       "path": "/projects/:project/repos/:repo/browse*%2F*.yaml",
-      "origin": "https://${BITBUCKET_API}",
+      "origin": "http://${BITBUCKET_API}",
       "auth": {
         "scheme": "basic",
         "username": "${BITBUCKET_USERNAME}",
@@ -55,7 +55,7 @@
       "//": "used to determine Cloud Config issues",
       "method": "GET",
       "path": "/projects/:project/repos/:repo/browse*/*.yml",
-      "origin": "https://${BITBUCKET_API}",
+      "origin": "http://${BITBUCKET_API}",
       "auth": {
         "scheme": "basic",
         "username": "${BITBUCKET_USERNAME}",
@@ -66,7 +66,7 @@
       "//": "used to determine Cloud Config issues",
       "method": "GET",
       "path": "/projects/:project/repos/:repo/browse*%2F*.yml",
-      "origin": "https://${BITBUCKET_API}",
+      "origin": "http://${BITBUCKET_API}",
       "auth": {
         "scheme": "basic",
         "username": "${BITBUCKET_USERNAME}",
@@ -77,7 +77,7 @@
       "//": "used to determine Cloud Config issues",
       "method": "GET",
       "path": "/projects/:project/repos/:repo/browse*/*.json",
-      "origin": "https://${BITBUCKET_API}",
+      "origin": "http://${BITBUCKET_API}",
       "auth": {
         "scheme": "basic",
         "username": "${BITBUCKET_USERNAME}",
@@ -88,7 +88,7 @@
       "//": "used to determine Cloud Config issues",
       "method": "GET",
       "path": "/projects/:project/repos/:repo/browse*%2F*.json",
-      "origin": "https://${BITBUCKET_API}",
+      "origin": "http://${BITBUCKET_API}",
       "auth": {
         "scheme": "basic",
         "username": "${BITBUCKET_USERNAME}",
