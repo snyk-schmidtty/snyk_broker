@@ -1,7 +1,5 @@
-version: '3'
-
 services:
-  snyk_broker:
+  bitbucket-broker:
     image: "snyk/broker:bitbucket-server"
 #    pull_policy: always
 #    image: "snykschmidtty/snyk-broker:bitbucket-tools"    
@@ -24,6 +22,19 @@ services:
       - NODE_TLS_REJECT_UNAUTHORIZED=0
 #      - HTTPS_KEY=/app/privkey.pem
 #      - HTTPS_CERT=/app/cert.pem
+  github-broker:
+    image: "snyk/broker:github-com"
+    restart: always
+    ports:
+      - "8001:8001"
+    volumes:
+      - .:/app
+    environment: 
+      - BROKER_TOKEN=$GH_BROKER_TOKEN
+      - LOG_LEVEL=info
+      - GITHUB_TOKEN=$GH_BROKER_GITHUB_TOKEN
+      - BROKER_CLIENT_URL=http://broker.797enterprises.com:8001
+      - PORT=8001
   code_agent:
     image: "snyk/code-agent:latest"
     restart: always
