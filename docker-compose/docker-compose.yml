@@ -2,7 +2,7 @@
 # Reference: https://github.com/snyk/broker
 version: "3.9"
 services:
-  snyk_broker-bitbucket-server:
+  bitbucket-server-broker:
     image: "snyk/broker:bitbucket-server"
     pull_policy: always
 #    image: "snykschmidtty/snyk-broker:bitbucket-tools"    
@@ -12,7 +12,6 @@ services:
     volumes:
       - ~/Workspace/snyk_broker/bitbucket:/private
 #      - /etc/letsencrypt/live/broker.797enterprises.com:/certs
-
     environment: 
       - BROKER_TOKEN=$BITBUCKET_BROKER_TOKEN
       - LOG_LEVEL=info
