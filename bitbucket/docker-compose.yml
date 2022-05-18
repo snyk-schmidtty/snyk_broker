@@ -11,13 +11,12 @@ services:
     volumes:
       - .:/app
 #      - /etc/letsencrypt/live/broker.797enterprises.com:/certs
-
     environment: 
-      - BROKER_TOKEN=
+      - BROKER_TOKEN=$BITBUCKET_BROKER_TOKEN
       - LOG_LEVEL=info
       - ACCEPT=/app/accept.json
-      - BITBUCKET_USERNAME=
-      - BITBUCKET_PASSWORD=
+      - BITBUCKET_USERNAME=$BITBUCKET_USER
+      - BITBUCKET_PASSWORD=$BITBUCKET_PASSWORD
       - BITBUCKET=bitbucket.797enterprises.com:7990
       - BITBUCKET_API=bitbucket.797enterprises.com:7990/rest/api/1.0
       - BROKER_CLIENT_URL=http://broker.797enterprises.com:8000

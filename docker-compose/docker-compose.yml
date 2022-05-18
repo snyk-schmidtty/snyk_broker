@@ -9,12 +9,12 @@ services:
     ports:
       - "8000:8000"
     volumes:
-      - .:/app
+      - ~/Workspace/snyk_broker/bitbucket:/private
 #      - /etc/letsencrypt/live/broker.797enterprises.com:/certs
     environment: 
-      - BROKER_TOKEN=
+      - BROKER_TOKEN=$BITBUCKET_BROKER_TOKEN
       - LOG_LEVEL=info
-      - ACCEPT=/app/accept.json
+      - ACCEPT=/private/accept.json
       - BITBUCKET_USERNAME=$BITBUCKET_USER
       - BITBUCKET_PASSWORD=$BITBUCKET_PASSWORD
       - BITBUCKET=bitbucket.797enterprises.com:7990
