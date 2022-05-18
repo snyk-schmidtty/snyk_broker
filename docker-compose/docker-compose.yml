@@ -24,3 +24,10 @@ services:
       - NODE_TLS_REJECT_UNAUTHORIZED=0
 #      - HTTPS_KEY=/app/privkey.pem
 #      - HTTPS_CERT=/app/cert.pem
+  code_agent:
+    image: "snyk/code-agent:latest"
+    restart: always
+    environment:
+      - PORT=3000
+      - SNYK_TOKEN=$CODE_AGENT_SNYK_TOKEN
+      - NODE_TLS_REJECT_UNAUTHRORIZED=0
