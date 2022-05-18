@@ -31,6 +31,6 @@ services:
     restart: always
     pull_policy: always
     environment:
-      PORT: 3000
-      SNYK_TOKEN: $CODE_AGENT_SNYK_TOKEN
-      NODE_TLS_REJECT_UNAUTHRORIZED: 0
+        PORT: 3000
+        SNYK_TOKEN: $CODE_AGENT_SNYK_TOKEN
+        NODE_TLS_REJECT_UNAUTHRORIZED: 0
