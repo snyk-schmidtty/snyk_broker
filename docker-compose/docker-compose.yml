@@ -3,7 +3,7 @@ version: '3'
 services:
   bitbucket-broker:
     image: "snyk/broker:bitbucket-server"
-#    pull_policy: always
+    pull_policy: always
 #    image: "snykschmidtty/snyk-broker:bitbucket-tools"    
     restart: always
     ports:
