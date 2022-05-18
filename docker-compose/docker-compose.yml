@@ -1,0 +1,37 @@
+# Reference: https://docs.snyk.io/snyk-code/snyk-code-local-git-support
+# Reference: https://github.com/snyk/broker
+version: "3.9"
+services:
+  snyk_broker-bitbucket-server:
+    image: "snyk/broker:bitbucket-server"
+    pull_policy: always
+#    image: "snykschmidtty/snyk-broker:bitbucket-tools"    
+    restart: always
+    ports:
+      - "8000:8000"
+    volumes:
+      - ~/Workspace/snyk_broker/bitbucket:/private
+#      - /etc/letsencrypt/live/broker.797enterprises.com:/certs
+
+    environment: 
+      - BROKER_TOKEN=$BITBUCKET_BROKER_TOKEN
+      - LOG_LEVEL=info
+      - ACCEPT=/private/accept.json
+      - BITBUCKET_USERNAME=$BITBUCKET_USER
+      - BITBUCKET_PASSWORD=$BITBUCKET_PASSWORD
+      - BITBUCKET=bitbucket.797enterprises.com:7990
+      - BITBUCKET_API=bitbucket.797enterprises.com:7990/rest/api/1.0
+      - BROKER_CLIENT_URL=http://broker.797enterprises.com:8000
+      - PORT=8000
+      - NODE_TLS_REJECT_UNAUTHORIZED=0
+      - GIT_CLIENT_URL=http://code-agent:3000
+#      - HTTPS_KEY=/app/privkey.pem
+#      - HTTPS_CERT=/app/cert.pem
+  code-agent:
+    image: snyk/code-agent
+    restart: always
+    pull_policy: always
+    environment:
+      PORT: 3000
+      SNYK_TOKEN: $CODE_AGENT_SNYK_TOKEN
+      NODE_TLS_REJECT_UNAUTHRORIZED: 0

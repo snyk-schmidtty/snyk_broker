@@ -1,0 +1,30 @@
+# Reference: https://docs.snyk.io/snyk-code/snyk-code-local-git-support
+# Reference: https://github.com/snyk/broker
+version: "3.9"
+services:
+  broker:
+    image: snyk/broker:bitbucket-server
+    ports:
+       - "8000:8000"
+    environment:
+      #ACCEPT: "/usr/share/cert/accept.json"
+      BITBUCKET: "stash.cengage.com"
+      BITBUCKET_API: "stash.cengage.com/rest/api/1.0"
+      BITBUCKET_PASSWORD: "****************"
+      BITBUCKET_USERNAME: "svc-waops"
+      BROKER_CLIENT_URL: "https://vsnykbroker01.webassign.net:8000"
+      BROKER_TOKEN: "b0ef580d-2ac7-45bc-a16e-55b9691a4172"
+      #HTTPS_CERT: "private/wildcard.webassign.net.crt"
+      #HTTPS_KEY: "private/wildcard.webassign.net.key"
+      GIT_CLIENT_URL: "http://code-agent:3000"
+      PORT: 8000
+      NODE_TLS_REJECT_UNAUTHRORIZED: 0
+      #volumes:
+      #- "/home/snyk/accept.json:/usr/share/cert/accept.json"
+      #- "/home/snyk/private:/private"
+  code-agent:
+    image: snyk/code-agent
+    environment:
+      PORT: 3000
+      SNYK_TOKEN: ""
+      NODE_TLS_REJECT_UNAUTHRORIZED: 0
