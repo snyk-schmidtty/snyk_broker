@@ -10,5 +10,5 @@ docker run -d \
 -e GITHUB_TOKEN=$GH_BROKER_GITHUB_TOKEN \
 -e BROKER_CLIENT_URL=http://broker.797enterprises.com:8002 \
 -e PORT=8002 \
--e GIT_CLIENT_URL=http://code-agent:3000 \
+-e GIT_CLIENT_URL=http://code-agent:3001 \
 snyk/broker:github-enterprise
