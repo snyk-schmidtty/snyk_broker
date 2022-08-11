@@ -12,6 +12,9 @@ docker run -d \
 -e LOG_LEVEL=info \
 -e ACCEPT=/private/accept.json \
 -e GITHUB_TOKEN=$GH_BROKER_GITHUB_TOKEN \
+-e GITHUB=api.github.com \
+-e GITHUB_API=api.github.com/api/v3 \
+-e GITHUB_GRAPHQL=api.github.com/api \
 -e BROKER_CLIENT_URL=http://broker.797enterprises.com:8002 \
 -e PORT=8002 \
 -e GIT_CLIENT_URL=http://code-agent:3001 \
