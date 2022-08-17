@@ -11,10 +11,8 @@ docker run -d \
 -e BROKER_TOKEN=$GITLAB_BROKER_TOKEN \
 -e LOG_LEVEL=info \
 -e ACCEPT=/private/accept.json \
--e BITBUCKET_USERNAME=$BITBUCKET_USER \
--e BITBUCKET_PASSWORD=$BITBUCKET_PASSWORD \
--e BITBUCKET=bitbucket.797enterprises.com:7990 \
--e BITBUCKET_API=bitbucket.797enterprises.com:7990/rest/api/1.0 \
+-e GITLAB_TOKEN=secret-gitlab-token \
+-e GITLAB=www.gitlab.com \
 -e BROKER_CLIENT_URL=http://broker.797enterprises.com:8003 \
 -e PORT=8003 \
 -e GIT_CLIENT_URL=http://code-agent:3001 \
